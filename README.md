@@ -1,30 +1,12 @@
 # singularity_executor [![Build Status](https://travis-ci.org/evertrue/singularity_executor-cookbook.svg)](https://travis-ci.org/evertrue/singularity_executor-cookbook)
 
-TODO: Enter the cookbook description here.
-
-# Requirements
-
-* `apt` cookbook
-* `some` cookbook
-* `another` cookbook
-
+Installs the (fairly poorly documented) HubSpot Singularity custom executor.
 
 # Recipes
 
 ## default
 
-Short Description
-
-1. Set up & updates apt using `apt::default`
-2. Install xyz by some proccess
-3. Include various recipes for this cookbook:
-    * `singularity_executor::install`
-        - which includes `singularity_executor::another`
-    * `singularity_executor::configure`
-
-## install
-
-More info about the install recipe
+The only one you need. Installs the executor
 
 # Usage
 
@@ -49,4 +31,4 @@ include_recipe 'singularity_executor::default'
 
 ## License and Authors
 
-Author:: The Authors (you@example.com)
+Author:: Evertrue, Inc (devops@evertrue.com)
