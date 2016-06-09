@@ -7,10 +7,12 @@ This is the Changelog for the singularity_executor cookbook.
 
 ### Fixes
 
-## v0.0.1 - (YYYY-MM-DD)
+## v1.0.1 - (2016-06-09)
 
 ### Added
 
 ### Changed
+
+* First rev!
 
 ### Removed
