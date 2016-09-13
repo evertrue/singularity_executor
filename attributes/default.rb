@@ -10,8 +10,7 @@ default['singularity_executor']['extra_args'] = %w(-Xmx128M)
 
 default['singularity_executor']['executor_yaml'] = {
   'defaultRunAsUser' => node['singularity_executor']['user'],
-  'globalTaskDefinitionDirectory' =>
-    "#{node['singularity_executor']['data_dir']}/executor-tasks",
+  'globalTaskDefinitionDirectory' => '/var/lib/singularity/executor-tasks',
   's3UploaderBucket' => nil,
   's3UploaderKeyPattern' => '/singularity/executor/tasks/',
   'taskAppDirectory' => '.',
