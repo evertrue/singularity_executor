@@ -7,6 +7,12 @@ This is the Changelog for the singularity_executor cookbook.
 
 ### Fixes
 
+## v1.0.3 - (2016-09-13)
+
+### Fixes
+
+* Hardcode the globalTaskDefinitionDirectory
+
 ## v1.0.2 - (2016-07-22)
 
 ### Fixes
