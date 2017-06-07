@@ -69,7 +69,14 @@ unless (creds = SingularityS3Uploader::Helpers.iam_credentials)
   fail 's3uploader requires an IAM profile'
 end
 
-node.override['singularity_executor']['s3uploader_yaml']['s3']['s3AccessKey'] =
+node.override['singularity_s3uploader']['s3uploader_yaml']['s3']['s3AccessKey'] =
   creds['AccessKeyId']
-node.override['singularity_executor']['s3uploader_yaml']['s3']['s3SecretKey'] =
+node.override['singularity_s3uploader']['s3uploader_yaml']['s3']['s3SecretKey'] =
   creds['SecretAccessKey']
+
+file '/etc/singularity.s3uploader.yaml' do
+  owner 'singularity'
+  group 'singularity'
+  content JSON.parse(node['singularity_s3uploader']['s3uploader_yaml'].to_json).to_yaml
+  mode 0o600
+end
