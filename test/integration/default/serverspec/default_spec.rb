@@ -51,7 +51,7 @@ describe 'singularity_executor::default' do
     end
   end
 
-  describe file '/usr/local/singularity/bin/SingularityExecutor-0.7.1-shaded.jar' do
+  describe file '/usr/local/singularity/bin/SingularityExecutor-0.15.1-shaded.jar' do
     it { is_expected.to be_file }
     it { is_expected.to be_mode '755' }
     it { is_expected.to be_owned_by 'singularity' }
@@ -60,7 +60,7 @@ describe 'singularity_executor::default' do
   describe file '/usr/local/singularity/bin/SingularityExecutor' do
     it do
       is_expected.to be_linked_to '/usr/local/singularity/bin/' \
-                                  'SingularityExecutor-0.7.1-shaded.jar'
+                                  'SingularityExecutor-0.15.1-shaded.jar'
     end
   end
 
