@@ -33,5 +33,3 @@ suites:
         extra_args:
           - -Xmx192M
           - -test
-        executor_yaml:
-          s3UploaderBucket: example
