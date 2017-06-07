@@ -43,7 +43,17 @@ remote_file jar_file do
 end
 
 if node['platform_version'].to_i < 16
-  Chef::Log.warn 'Not supported yet'
+  directory node['singularity_s3uploader']['log_dir']
+
+  template '/etc/init/singularity-s3uploader.conf' do
+    source 'singularity-s3uploader-upstart.erb'
+    variables jar_file: jar_file
+  end
+
+  service 'singularity-s3uploader' do
+    provider Chef::Provider::Service::Upstart
+    action %i(start enable)
+  end
 else
   template '/etc/systemd/system/singularity-s3uploader.service' do
     source 'singularity-s3uploader-systemd.erb'
@@ -51,7 +61,6 @@ else
   end
 
   service 'singularity-s3uploader' do
-    provider Chef::Provider::Service::Systemd
     action %i(start enable)
   end
 end

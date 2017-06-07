@@ -4,6 +4,7 @@ default['singularity_s3uploader']['checksum'] =
 
 default['singularity_s3uploader']['home'] = '/usr/local/singularity'
 default['singularity_s3uploader']['java_args'] = %w(-Xmx128M -Xms128M)
+default['singularity_s3uploader']['log_dir'] = '/var/log/singularity-s3uploader'
 
 default['singularity_executor']['s3uploader_yaml'] = {
   's3' => {
