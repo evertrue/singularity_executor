@@ -1,7 +1,7 @@
 ---
 driver:
   name: ec2
-  require_chef_omnibus: 12.10.24
+  require_chef_omnibus: 12.17.44
   aws_ssh_key_id: aws_dev
   region: us-east-1
   availability_zone: us-east-1b
@@ -12,7 +12,6 @@ driver:
   iam_profile_name: prod-singularity-executor
 
 transport:
-  ssh_key: /Users/eherot/.ssh/aws_dev.pem
   name: sftp
 
 provisioner:
@@ -22,6 +21,7 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
+  - name: ubuntu-16.04
 
 suites:
   - name: default
