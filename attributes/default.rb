@@ -1,4 +1,4 @@
-default['singularity_executor']['version'] = '0.7.1'
+default['singularity_executor']['version'] = '0.15.1'
 
 default['singularity_executor']['user'] = 'singularity'
 default['singularity_executor']['home'] = '/usr/local/singularity'
