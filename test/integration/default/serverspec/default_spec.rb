@@ -64,7 +64,7 @@ describe 'singularity_executor::default' do
     end
   end
 
-  describe file '/usr/local/singularity/bin/SingularityS3Uploader-0.15.1.jar' do
+  describe file '/usr/local/singularity/bin/SingularityS3Uploader-0.15.1-shaded.jar' do
     it { is_expected.to be_file }
   end
 end
