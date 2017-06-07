@@ -9,6 +9,7 @@ driver:
     - ci-testing
   instance_type: c3.large
   interface: public
+  iam_profile_name: prod-singularity-executor
 
 transport:
   ssh_key: /Users/eherot/.ssh/aws_dev.pem
@@ -26,6 +27,7 @@ suites:
   - name: default
     run_list:
       - recipe[singularity_executor::default]
+      - recipe[singularity_executor::s3uploader]
     attributes:
       singularity_executor:
         extra_args:
