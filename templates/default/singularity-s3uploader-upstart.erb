@@ -1,0 +1,8 @@
+#!upstart
+description "Singularity S3 Uploader Service"
+
+start on stopped rc RUNLEVEL=[2345]
+
+respawn
+
+exec <%= node['java']['java_home'] %>/bin/java <%= node['singularity_s3uploader']['java_args'].join ' ' %> -jar <%= @jar_file %> >> <%= node['singularity_s3uploader']['log_dir'] %>/singularity.log 2>&1
