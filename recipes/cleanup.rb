@@ -60,3 +60,7 @@ file '/etc/singularity.executor.cleanup.yaml' do
   content JSON.parse(node['singularity_executor']['cleanup_yaml'].to_json).to_yaml
   mode 0o644
 end
+
+directory node['singularity_executor']['cleanup_yaml']['executorCleanupResultsDirectory'] do
+  recursive true
+end
