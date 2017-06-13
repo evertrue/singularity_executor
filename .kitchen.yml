@@ -16,8 +16,6 @@ transport:
 
 provisioner:
   name: chef_zero
-  config_rb:
-    environment: dev
 
 platforms:
   - name: ubuntu-14.04
