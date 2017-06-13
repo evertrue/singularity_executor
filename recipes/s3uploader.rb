@@ -58,6 +58,7 @@ else
   template '/etc/systemd/system/singularity-s3uploader.service' do
     source 'singularity-s3uploader-systemd.erb'
     variables jar_file: jar_file
+    notifies :run, 'execute[systemctl daemon-reload]'
   end
 
   service 'singularity-s3uploader' do

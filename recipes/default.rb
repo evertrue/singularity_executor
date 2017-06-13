@@ -74,3 +74,9 @@ end
 template "#{node['singularity_executor']['home']}/bin/singularity-executor" do
   mode 0755
 end
+
+execute 'systemctl daemon-reload' do
+  command 'systemctl daemon-reload'
+  not_if { node['platform_version'].to_i < 16 }
+  action :nothing
+end
