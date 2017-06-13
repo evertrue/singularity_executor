@@ -58,5 +58,5 @@ file '/etc/singularity.executor.cleanup.yaml' do
   owner 'singularity'
   group 'singularity'
   content JSON.parse(node['singularity_executor']['cleanup_yaml'].to_json).to_yaml
-  mode 0o600
+  mode 0o644
 end
