@@ -1,0 +1,10 @@
+{
+  "id": "singularity1",
+  "chef_environment": "_default",
+  "automatic": {
+    "fqdn": "dev-singularity1.priv.evertrue.com",
+    "recipes": [
+      "et_singularity::default"
+    ]
+  }
+}

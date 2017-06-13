@@ -80,3 +80,5 @@ execute 'systemctl daemon-reload' do
   not_if { node['platform_version'].to_i < 16 }
   action :nothing
 end
+
+include_recipe 'singularity_executor::cleanup'

@@ -13,3 +13,4 @@ issues_url 'https://github.com/evertrue/singularity_executor-cookbook/issues' if
 
 depends 'java'
 depends 'maven'
+depends 'cron'
