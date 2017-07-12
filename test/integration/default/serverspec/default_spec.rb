@@ -22,7 +22,7 @@ describe 'singularity_executor::default' do
   describe file '/etc/singularity.executor.yaml' do
     describe '#content' do
       subject { super().content }
-      it { is_expected.to include 'defaultRunAsUser: singularity' }
+      it { is_expected.to include 'defaultRunAsUser: root' }
       it { is_expected.to include 'serviceLog: service.log' }
     end
   end
