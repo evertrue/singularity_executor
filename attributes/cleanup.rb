@@ -8,7 +8,7 @@ default['singularity_executor']['cleanup_yaml'] = {
       { 'filename' => 'stderr' }
     ]
   },
-  'singularityContextPath' => '/api',
+  'singularityContextPath' => 'api',
   'executorCleanupResultsDirectory' => '/tmp/singularity-executor-cleanup-results'
 }
 default['singularity_executor']['singularity_host_search_str'] =
