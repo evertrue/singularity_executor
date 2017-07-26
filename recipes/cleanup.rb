@@ -64,3 +64,9 @@ end
 directory node['singularity_executor']['cleanup_yaml']['executorCleanupResultsDirectory'] do
   recursive true
 end
+
+logrotate_app 'singularity-executor-cleanup' do
+  path "#{node['singularity_executor']['log_dir']}/singularity-executor-cleanup.log"
+  frequency 'daily'
+  rotate 7
+end
