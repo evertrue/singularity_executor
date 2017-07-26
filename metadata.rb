@@ -4,7 +4,7 @@ maintainer_email 'devops@evertrue.com'
 license          'All rights reserved'
 description      'Installs Singularity Executor'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '2.1.2'
+version          '2.1.3'
 
 supports 'ubuntu', '>= 14.04'
 
