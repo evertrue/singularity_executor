@@ -67,6 +67,6 @@ end
 
 logrotate_app 'singularity-executor-cleanup' do
   path "#{node['singularity_executor']['log_dir']}/singularity-executor-cleanup.log"
-  frequency 'daily'
-  rotate 7
+  size '300M'
+  rotate 28
 end
